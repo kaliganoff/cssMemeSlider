@@ -3,14 +3,91 @@
 }
 
 .slider-container {
-    width: 94vw;
+    width: 50em;
     margin: auto;
     background-color: aqua;
-    height: 50vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.img-container {
+    display: flex;
+    width: 50em;
+    overflow: hidden;
+    height: 100em;
+}
+
+.meme {
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+.bottom-part {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.label-container {
+    display: flex;
 }
 
 .label {
-    width: 50vw;
-    height: 50vh;
+    width: 5vw;
+    height: 5vh;
     background-color: antiquewhite;
+}
+
+.circle {
+    background-color: aqua;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+.captions-container {
+    display: flex;
+    width: 10em;
+    gap: 10em;
+    overflow: hidden;
+}
+
+p {
+    transition: 1s;
+    text-wrap: nowrap;
+}
+
+#radio2:checked ~ .img-container > .meme:first-child {
+    margin-left: -50em;
+}
+
+#radio3:checked ~ .img-container > .meme:first-child {
+    margin-left: -100em;
+}
+
+#radio4:checked ~ .img-container > .meme:first-child {
+    margin-left: -150em;
+}
+
+#radio5:checked ~ .img-container > .meme:first-child {
+    margin-left: -200em;
+}
+
+#radio2:checked ~ .bottom-part > .captions-container > p:first-child {
+    margin-left: -10em;
+}
+
+#radio3:checked ~ .img-container > .meme:first-child {
+    margin-left: -100em;
+}
+
+#radio4:checked ~ .img-container > .meme:first-child {
+    margin-left: -150em;
+}
+
+#radio5:checked ~ .img-container > .meme:first-child {
+    margin-left: -200em;
 }
