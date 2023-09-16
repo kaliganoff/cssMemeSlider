@@ -1,3 +1,7 @@
+body {
+    background-color: gray;
+}
+
 .radio {
     display: none;
 }
@@ -5,8 +9,8 @@
 .slider-container {
     width: 50em;
     margin: auto;
-    background-color: aqua;
-    height: 100vh;
+    background-color: white;
+    height: 98vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -29,26 +33,49 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
+    height: 3em;
 }
 
 .label-container {
     display: flex;
+    gap: 0.1em;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .label {
-    width: 5vw;
-    height: 5vh;
-    background-color: antiquewhite;
+    width: 2em;
+    height: 2em;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.label:hover {
+   cursor: pointer;
+}
+
+.label:hover > .circle {
+    filter: invert(30%);
+ }
+
+ .label:active > .circle {
+    background-color: black;
+ }
+ 
 
 .circle {
     background-color: aqua;
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
     border-radius: 50%;
 }
 
 .captions-container {
+    padding: 0px;
+    margin-top: 0px;
     display: flex;
     width: 10em;
     gap: 10em;
@@ -56,6 +83,8 @@
 }
 
 p {
+    margin: 0px;
+    padding: 0px;
     transition: 1s;
     text-wrap: nowrap;
 }
@@ -77,17 +106,33 @@ p {
 }
 
 #radio2:checked ~ .bottom-part > .captions-container > p:first-child {
-    margin-left: -10em;
+    margin-left: -14.7em;
 }
 
-#radio3:checked ~ .img-container > .meme:first-child {
-    margin-left: -100em;
+#radio3:checked ~ .bottom-part > .captions-container > p:first-child {
+    margin-left: -27em;
 }
 
-#radio4:checked ~ .img-container > .meme:first-child {
-    margin-left: -150em;
+#radio4:checked ~ .bottom-part > .captions-container > p:first-child {
+    margin-left: -40.6em;
 }
 
 #radio5:checked ~ .img-container > .meme:first-child {
     margin-left: -200em;
+}
+
+#radio1:checked ~ .bottom-part > .label-container > .label > #circle1 {
+    background-color: blanchedalmond;
+}
+
+#radio2:checked ~ .bottom-part > .label-container > .label > #circle2 {
+    background-color: blanchedalmond;
+}
+
+#radio3:checked ~ .bottom-part > .label-container > .label > #circle3 {
+    background-color: blanchedalmond;
+}
+
+#radio4:checked ~ .bottom-part > .label-container > .label > #circle4 {
+    background-color: blanchedalmond;
 }
