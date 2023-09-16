@@ -101,10 +101,6 @@ p {
     margin-left: -150em;
 }
 
-#radio5:checked ~ .img-container > .meme:first-child {
-    margin-left: -200em;
-}
-
 #radio2:checked ~ .bottom-part > .captions-container > p:first-child {
     margin-left: -14.7em;
 }
@@ -117,9 +113,6 @@ p {
     margin-left: -40.6em;
 }
 
-#radio5:checked ~ .img-container > .meme:first-child {
-    margin-left: -200em;
-}
 
 #radio1:checked ~ .bottom-part > .label-container > .label > #circle1 {
     background-color: blanchedalmond;
@@ -135,4 +128,43 @@ p {
 
 #radio4:checked ~ .bottom-part > .label-container > .label > #circle4 {
     background-color: blanchedalmond;
+}
+
+@media screen and (max-width: 768px) {
+    .slider-container {
+        width: 30em;
+        margin: auto;
+        background-color: white;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .img-container {
+        width: 30em;
+    }
+    
+    .bottom-part {
+        flex-direction: column;
+        width: 30em;
+        align-items: flex-start;
+    }
+
+    .label-container {
+        align-self: center;
+    }
+
+    #radio2:checked ~ .img-container > .meme:first-child {
+        margin-left: -100%;
+    }
+    
+    #radio3:checked ~ .img-container > .meme:first-child {
+        margin-left: -200%;
+    }
+    
+    #radio4:checked ~ .img-container > .meme:first-child {
+        margin-left: -300%;
+    }
+
 }
