@@ -1,0 +1,16 @@
+.radio {
+    display: none;
+}
+
+.slider-container {
+    width: 94vw;
+    margin: auto;
+    background-color: aqua;
+    height: 50vh;
+}
+
+.label {
+    width: 50vw;
+    height: 50vh;
+    background-color: antiquewhite;
+}
