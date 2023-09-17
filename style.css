@@ -7,18 +7,19 @@ body {
 }
 
 .slider-container {
-    width: 50em;
+    width: 80vw;
     margin: auto;
-    background-color: white;
+    background-color: antiquewhite;
     height: 98vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    padding: 0.5em 1em 0em 1em;
 }
 
 .img-container {
     display: flex;
-    width: 50em;
+    width: 80vw;
     overflow: hidden;
     height: 100em;
 }
@@ -47,7 +48,7 @@ body {
 .label {
     width: 2em;
     height: 2em;
-    background-color: white;
+    background-color: antiquewhite;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,15 +91,15 @@ p {
 }
 
 #radio2:checked ~ .img-container > .meme:first-child {
-    margin-left: -50em;
+    margin-left: -100%;
 }
 
 #radio3:checked ~ .img-container > .meme:first-child {
-    margin-left: -100em;
+    margin-left: -200%;
 }
 
 #radio4:checked ~ .img-container > .meme:first-child {
-    margin-left: -150em;
+    margin-left: -300%;
 }
 
 #radio2:checked ~ .bottom-part > .captions-container > p:first-child {
@@ -115,34 +116,41 @@ p {
 
 
 #radio1:checked ~ .bottom-part > .label-container > .label > #circle1 {
-    background-color: blanchedalmond;
+    background-color: honeydew;
 }
 
 #radio2:checked ~ .bottom-part > .label-container > .label > #circle2 {
-    background-color: blanchedalmond;
+    background-color: honeydew;
 }
 
 #radio3:checked ~ .bottom-part > .label-container > .label > #circle3 {
-    background-color: blanchedalmond;
+    background-color: honeydew;
 }
 
 #radio4:checked ~ .bottom-part > .label-container > .label > #circle4 {
-    background-color: blanchedalmond;
+    background-color: honeydew;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 866px) {
     .slider-container {
         width: 30em;
         margin: auto;
-        background-color: white;
-        height: 70vh;
+        background-color: antiquewhite;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        justify-content: flex-start;
     }
 
     .img-container {
         width: 30em;
+        height: 20em;
+    }
+
+    .meme {
+        width: 30em;
+        height: 20em;
     }
     
     .bottom-part {
@@ -167,4 +175,14 @@ p {
         margin-left: -300%;
     }
 
+}
+
+@media screen and (min-width: 1025px) {
+    .slider-container {
+        width: 50em;
+    }
+    
+    .img-container {
+        width: 50em;
+}
 }
