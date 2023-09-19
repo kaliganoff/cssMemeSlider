@@ -1,0 +1,206 @@
+body {
+    background-color: gray;
+}
+
+.radio {
+    display: none;
+}
+
+.slider-container {
+    width: 80vw;
+    margin: auto;
+    background-color: antiquewhite;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0.5em 1em 0em 1em;
+}
+
+.img-container {
+    display: flex;
+    width: 80vw;
+    overflow: hidden;
+    height: 100em;
+}
+
+.meme {
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+.bottom-part {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+}
+
+.label-container {
+    display: flex;
+    gap: 0.1em;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.label {
+    width: 2em;
+    height: 2em;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label:hover {
+   cursor: pointer;
+}
+
+.label:hover > .circle {
+    filter: invert(30%);
+ }
+
+ .label:active > .circle {
+    background-color: black;
+ }
+ 
+
+.circle {
+    background-color: aqua;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+}
+
+.captions-container {
+    padding: 0px;
+    margin-top: 0px;
+    display: flex;
+    width: 10em;
+    gap: 10em;
+    overflow: hidden;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    transition: 1s;
+    text-wrap: nowrap;
+}
+
+#radio2:checked ~ .img-container > .meme:first-child {
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .img-container > .meme:first-child {
+    margin-left: -200%;
+}
+
+#radio4:checked ~ .img-container > .meme:first-child {
+    margin-left: -300%;
+}
+
+#radio2:checked ~ .bottom-part > .captions-container > p:first-child {
+    margin-left: -14.7em;
+}
+
+#radio3:checked ~ .bottom-part > .captions-container > p:first-child {
+    margin-left: -27em;
+}
+
+#radio4:checked ~ .bottom-part > .captions-container > p:first-child {
+    margin-left: -40.6em;
+}
+
+
+#radio1:checked ~ .bottom-part > .label-container > .label > #circle1 {
+    background-color: honeydew;
+}
+
+#radio2:checked ~ .bottom-part > .label-container > .label > #circle2 {
+    background-color: honeydew;
+}
+
+#radio3:checked ~ .bottom-part > .label-container > .label > #circle3 {
+    background-color: honeydew;
+}
+
+#radio4:checked ~ .bottom-part > .label-container > .label > #circle4 {
+    background-color: honeydew;
+}
+
+@media screen and (max-width: 866px) {
+    .slider-container {
+        width: 30em;
+        margin: auto;
+        background-color: antiquewhite;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: flex-start;
+    }
+
+    .img-container {
+        width: 30em;
+        height: 20em;
+    }
+
+    .meme {
+        width: 30em;
+        height: 20em;
+    }
+    
+    .bottom-part {
+        flex-direction: column;
+        width: 30em;
+        align-items: flex-start;
+    }
+
+    .label-container {
+        align-self: center;
+    }
+
+    #radio2:checked ~ .img-container > .meme:first-child {
+        margin-left: -100%;
+    }
+    
+    #radio3:checked ~ .img-container > .meme:first-child {
+        margin-left: -200%;
+    }
+    
+    #radio4:checked ~ .img-container > .meme:first-child {
+        margin-left: -300%;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+    .slider-container {
+        width: 50em;
+    }
+    
+    .img-container {
+        width: 50em;
+}
+}
+
+@media screen and (max-width: 560px) {
+    .slider-container {
+        width: 80vw;
+    }
+
+    .img-container {
+        width: 80vw;
+    }
+
+    .meme {
+        width: 80vw;
+    }
+
+    .bottom-part {
+        width: 80vw;
+    }
+}
