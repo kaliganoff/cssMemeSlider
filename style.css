@@ -186,3 +186,21 @@ p {
         width: 50em;
 }
 }
+
+@media screen and (max-width: 560px) {
+    .slider-container {
+        width: 80vw;
+    }
+
+    .img-container {
+        width: 80vw;
+    }
+
+    .meme {
+        width: 80vw;
+    }
+
+    .bottom-part {
+        width: 80vw;
+    }
+}
